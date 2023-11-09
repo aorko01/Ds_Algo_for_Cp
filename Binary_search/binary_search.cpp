@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int binary_search(int* a, int size, int target) {
-    int start = 0, end = size - 1;
+int binary_search(int* a, long long size, long long target) {
+    long long  start = 0, end = size - 1;
     while (start <= end) {
-        int mid = (start + end) / 2;
+        long long mid = start + (end-start)/2;
         if (a[mid] == target)
             return mid;
         else if (a[mid] < target)
