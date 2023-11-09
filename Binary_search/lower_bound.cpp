@@ -10,7 +10,7 @@ int binary_search(int* a, long long size, long long target) {
     int answer=size;
     while (start <= end) {
         long long mid = start + (end-start)/2;
-        if(a[mid]>=target)
+        if(a[mid]>target)
         {
             answer=mid;
             end=mid-1;
@@ -26,6 +26,6 @@ int binary_search(int* a, long long size, long long target) {
 int main() {
     int a[9] = {2, 3, 6, 10, 1, 4, 8, 9,11};
     sort(a, a + 9);
-    cout << binary_search(a, 9, 5);
+    cout << binary_search(a, 9, 11);
     return 0;
 }
