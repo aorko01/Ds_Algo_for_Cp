@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool a[100000000];
+bool a[10000000];
 //No optimization
 // void create_sieve(int N)
 // {
@@ -64,16 +64,28 @@ void create_sieve(int N)
         }
     }
 }
+bool is_prime(int x)
+{
+    if(a[x]==true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 int main()
 {
     int n;
     cin>>n;
     create_sieve(n);
-    for(int i=2;i<=n;i++)
-    {
-        if(a[i]==true)
-        {
-            cout<<i<<" ";
-        }
-    }
+    // for(int i=2;i<=n;i++)
+    // {
+    //     if(a[i]==true)
+    //     {
+    //         cout<<i<<" ";
+    //     }
+    // }
+    cout<<is_prime(n);   
 }
