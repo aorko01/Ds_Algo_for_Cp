@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool a[1000000];
+bool a[100000000];
 //No optimization
 // void create_sieve(int N)
 // {
